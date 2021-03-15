@@ -1,0 +1,6 @@
+Query is for oracle SQL
+
+SELECT A.ID AS ID, A.UserName AS UserName, B.UserName AS ParentUserName
+FROM USER A
+LEFT JOIN USER B ON A.Parent = B.ID
+ORDER BY ID ASC
