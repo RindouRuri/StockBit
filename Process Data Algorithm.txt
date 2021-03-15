@@ -1,0 +1,14 @@
+Service 1 :
+1. Read file
+2. Read each line, skip 1st line, then loop until eof
+3. Send each line to kafka
+
+Service 2 :
+1. Read data from kafka
+2. Parse data using String '|'
+3. Convert array[0] of data to Date, then convert the format to HH:MM
+4. Make ArrayList A for min and max value
+5. Make HashMap of A named B, using Code as key
+6. Make HashMap of B named C, using time as key
+7. Compare price of each data from kafka, if there's no data for Code and Time, min and max is set with that price, else, compare and replace if there's higher for max or lower for min
+8. Loop data of HashMap C sorted by time, write to file
